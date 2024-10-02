@@ -1,0 +1,621 @@
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --dark-color: #070917;
+  --light-color: #e8f7fb;
+  --light-blue-color: #6f7dfb;
+}
+
+body {
+  margin: 0;
+  font-family: "Popins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+
+/*buttons*/
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+}
+
+.btn.dark {
+  background-color: var(--dark-blue-color);
+}
+
+.btn.light {
+  background-color: var(--orange-color);
+  text-decoration: none;
+}
+
+.btn.enroll-icon::before {
+  content: url("assets/images/enroll-icon.svg");
+  position: absolute;
+  top: 30%;
+  left: 8px;
+  align-self: flex-start;
+}
+
+/*Header*/
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  width: 100%;
+  height: 100vh;
+}
+
+/*Nav*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  width: 1134px;
+  top: 0;
+  padding: 20px 0px;
+  z-index: 100;
+}
+nav.scrolled {
+  background-color: var(--dark-color);
+  box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  transition: all 500ms ease;
+}
+nav .logo {
+  /* Logo */
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+nav ul li a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* hero section*/
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero-section .left {
+  width: 457px;
+}
+
+.hero-section .left h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  /* or 62px */
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.hero-section .left p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+
+  color: #ffffff;
+}
+
+.hero-section .right {
+  align-self: flex-end;
+}
+
+.hero-section .right img {
+  height: 520px;
+  vertical-align: middle;
+}
+
+.achievment-card {
+  position: relative;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.achievment-card .content {
+  border-radius: 24px;
+  background-color: #fff;
+  padding: 8px 32px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.achievment-card.students-enrolled {
+  left: 20px;
+}
+
+.achievment-card h3 {
+  text-align: center;
+  color: var(--dark-blue-color);
+  font-size: 36px;
+  margin: 0;
+}
+
+.achievment-card p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  /* identical to box height, or 20px */
+
+  color: #023047;
+}
+
+.achievment-card .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 8px;
+  left: 8px;
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  border-radius: 24px;
+  z-index: 1;
+}
+
+/* Rectangle 11 */
+/*Testimonial Section*/
+section {
+  margin-top: 100px;
+}
+
+.testimonial-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.testimonial-section .right h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  color: var(--dark-blue-color);
+  margin: 0;
+}
+
+.testimonial-section .right p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--dark-blue-color);
+  margin: 12px 0;
+}
+
+.testimonial-section .testimonial-card {
+  align-items: flex-start;
+  padding: 0px;
+  width: 442px;
+  background: #ffffff;
+  box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  margin-bottom: 50px;
+}
+
+.testimonial-card {
+  position: relative;
+}
+
+.testimonial-section .testimonial-card .content {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 150%;
+  color: #ffffff;
+  border-radius: 24px;
+  background: var(--light-blue-color);
+  gap: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+.testimonial-section .testimonial-card:last-child .content {
+  background: var(--orange-color);
+  transform: translatex(10px);
+}
+
+.testimonial-section .testimonial-card:last-child {
+  transform: translatex(30px);
+}
+
+.testimonial-section .testimonial-card .info {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--dark-blue-color);
+}
+
+.testimonial-section .testimonial-card .company {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--dark-blue-color);
+  margin: 0;
+}
+
+.testimonial-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.testimonial-info .testimonial-image {
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
+}
+
+/* courses section */
+
+.courses-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+}
+
+.courses-section .light {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 120%;
+  /* identical to box height, or 72px */
+  text-align: center;
+  color: #ffffff;
+  padding: 50px;
+}
+
+.courses-section .course-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.courses-section .course-cards .course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffffff;
+  border-radius: 24px;
+}
+
+.courses-section .course-cards .course-card .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.app-section {
+  margin-top: 100px;
+}
+
+.app-section h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 120%;
+  /* identical to box height, or 72px */
+  text-align: center;
+  color: var(--dark-blue-color);
+  margin-bottom: 0;
+}
+
+.app-section p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  /* identical to box height, or 32px */
+  text-align: center;
+
+  color: var(--dark-blue-color);
+  margin-top: 13px;
+}
+
+.app-section .app-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.app-btn {
+  display: flex;
+  padding: 20px 31px;
+  gap: 14px;
+  align-items: center;
+  background: #000000;
+  color: #fff;
+  text-decoration: none;
+  width: 310px;
+  height: 100px;
+  margin-top: 50px;
+}
+
+/*foooter section*/
+
+footer {
+  background: var(--dark-color);
+  width: 100%;
+
+  padding: 70px 0;
+  color: #fff;
+  margin-top: 100px;
+}
+
+footer .links-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+}
+
+footer ul li a {
+  color: #fff;
+}
+footer ul li {
+  margin: 10px 0;
+}
+.links h3 {
+  color: var(--orange-color);
+}
+.social {
+  margin-left: 40px;
+}
+.social a {
+  margin-right: 28px;
+}
+footer form {
+  margin-top: 16px;
+  margin-left: 40px;
+  position: relative;
+}
+
+footer form input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #000000;
+  background: #ffffff;
+  border-radius: 8px;
+  /* Rectangle 14 */
+  width: 100%;
+  padding: 8px 32px;
+}
+footer form button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  /* Rectangle 15 */
+  background: #023047;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+}
+nav.mobile-nav {
+  display: none;
+}
+.mobile-container {
+  display: none;
+}
+
+/* tablet version */
+@media (max-width: 1100px) {
+  .btn {
+    padding: 12px 32px;
+  }
+
+  .wrapper {
+    padding: 0 100px;
+  }
+  nav {
+    width: 100%;
+    padding: 10px 50px;
+    left: 0;
+    right: 0;
+  }
+  header,
+  .hero-section,
+  .wrapper {
+    max-height: 1000px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    position: relative;
+  }
+  .hero-section .left {
+    width: 100%;
+  }
+  .achievment-card {
+    position: relative;
+  }
+  .achievment-card.achievment-card.students-enrolled,
+  .achievment-card.overall-rating {
+    left: unset;
+    right: unset;
+    margin: 30px;
+  }
+  .hero-section .achievment-cards {
+    margin: 20px;
+    align-self: flex-start;
+  }
+  .hero-section .left {
+    display: flex;
+    flex-direction: column;
+    align-self: self-start;
+    margin-top: 70px;
+    width: 50%;
+  }
+  .hero-section .right {
+    position: absolute;
+    bottom: 0;
+  }
+  .testimonial-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .testimonial-section .testimonial-card {
+    width: 100%;
+  }
+  .testimonial-section .right {
+    order: 1;
+  }
+  .testimonial-section .left {
+    order: 2;
+  }
+  .courses-section .course-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .courses-section .course-cards .course-card {
+    margin-bottom: 80px;
+    align-items: center;
+  }
+  /* IPad area */
+}
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  nav.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav.mobile-nav.scrolled {
+    padding: 30px 100px;
+    background-color: var(--light-blue-color);
+  }
+  .mobile-container {
+    background-color: var(--dark-color);
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+    position: fixed;
+    left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 400ms ease;
+  }
+  .mobile-container.active {
+    left: 0;
+    transition: all 400ms ease;
+  }
+
+  .mobile-container .close-icon {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+  }
+  .mobile-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-container ul {
+    list-style: 0;
+    padding: 0;
+  }
+  .mobile-container ul li {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .mobile-container ul li a {
+    color: #fff;
+    font-size: 36px;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper {
+    padding: 0 32px;
+  }
+  .hero-section .left p {
+    width: 100%;
+  }
+  .hero-section .left {
+    width: 100%;
+  }
+  .hero-section .right {
+    top: 636px;
+    left: 171px;
+  }
+  .app-section .app-buttons {
+    flex-direction: column;
+  }
+  .hero-section .right img {
+    height: 300px;
+  }
+  .btn {
+    width: 180px;
+  }
+  .achievment-card .content {
+    padding: 0;
+  }
+  .achievment-card .bg {
+    width: 98%;
+    height: 97%;
+    top: 6px;
+    left: 6px;
+  }
+  .hero-section .achievment-cards {
+    transform: translateX(-30%);
+  }
+  .course-card img {
+    width: 349px;
+    height: 240px;
+  }
+
+  .courses {
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+}
